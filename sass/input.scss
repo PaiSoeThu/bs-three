@@ -1,0 +1,124 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+$primary : #2639ED;
+$secondary : #ffede3fa;
+$tertiary : #FF9900;
+$info : #d9e5f8;
+$accent : #FFF2F8;
+$heart : #FF007A;
+$leaf :#DEFFEE;
+$tree :#00DA71;
+
+
+
+// _variables.scss
+
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "tertiary":    $tertiary,
+  "accent": $accent,
+  "info": $info,
+  "heart": $heart,
+  "tree" : $tree,
+  "leaf": $leaf
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
+
+$container-margin-x: 2rem !default;
+
+
+// Source mixin
+@mixin make-container($padding-x: $container-padding-x,$margin-x:$container-margin-x) {
+    @media (min-width: 1400px) {
+        width: 100%;
+        padding-right:0px;
+        padding-left: $padding-x;
+        margin-right: auto;
+        margin-left: $container-margin-x;
+    }
+    @media (max-width: 1399px) {
+        width: 100%;
+        padding-right: 0px;
+        padding-left: 5.5rem;
+        margin-right: 0px;
+        margin-left: $container-margin-x;
+    }
+    @media (max-width: 1200px) {
+        width: 100%;
+        padding-right: $padding-x;
+        padding-left: 0px;
+        margin-right: auto;
+        margin-left:  $container-margin-x;
+
+    }
+  
+  }
+  
+  // Usage
+  .custom-container {
+    @include make-container();
+  }
+  .custom-container-2{
+    @include make-container();
+    margin-left: 1.5rem!important;
+  }
+
+  #hero-section .boob-1 {
+    top: -22px;
+    left: -45px;
+    z-index: -1;
+    }
+
+    #hero-section .left{
+        background-image: url(./public/photos/ziza-cta-Group-73.png);
+        background-repeat: no-repeat;
+        background-size:auto;
+        background-position:left bottom;
+        max-width: 100%;
+      }
+    
+      #hero-section .boob-2 {
+        background-color: #fed1dc;
+        bottom: -95px;
+        left: 200px;
+        z-index: -1;
+        width: 200px;
+        height: 200px;
+        clip-path: ellipse(50% 40% at 1% 49%);
+    }
+
+    .custom-container-2{
+        background-repeat: no-repeat;
+        background-size:auto;
+        background-position:center;
+        max-width: 100%;
+    }
+
+    #video{
+        background-repeat: no-repeat;
+        background-size:auto;
+        background-position:center;
+        max-width: 100%;
+    }
+
+
+
+// Then add additional custom code here
+
+
+  
