@@ -12,6 +12,9 @@ $heart : #FF007A;
 $leaf :#DEFFEE;
 $tree :#00DA71;
 
+$carousel-indicator-active-bg:       $heart;
+
+$carousel-control-color:             $tree;
 
 
 // _variables.scss
@@ -35,6 +38,8 @@ $theme-colors: (
   "tree" : $tree,
   "leaf": $leaf
 );
+
+
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
@@ -115,6 +120,61 @@ $container-margin-x: 2rem !default;
         background-position:center;
         max-width: 100%;
     }
+    .testinomial{
+      margin-top: -100px;
+    }
+
+    // #scrisuber{
+    //   background-image: url(../public/photos/ziza-dots-94.png), url(../public/photos/custom-7.png);
+    //   background-position: right top, left bottom;
+    //   background-repeat: no-repeat, no-repeat;
+    // }
+
+    .subscriber-img-one{
+      top: 0px;
+      right: 25px;
+      z-index: -1;
+    }
+    .subscriber-img-two{
+      bottom: 0px;
+      left: 25px;
+      z-index: -1;
+    }
+
+    .subscriber{
+      background-color: $info;
+      border-radius: 50px;
+    }
+    .subscriber-child{
+      height: 400px;
+    }
+    .newletter-two{
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+      border-top-left-radius: 300px;
+      border-bottom-left-radius: 300px;
+    }
+
+    .typing{
+      margin-left: -117px;
+  }
+
+    @media screen and (max-width : 768px) {
+      .typing{
+        margin-left: 0px;
+    }
+    .newletter-two{
+      border-radius: 50px;
+    
+    }
+    }
+
+   
+
+
+
+   
+    
 
 
 
